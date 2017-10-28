@@ -12,7 +12,7 @@
 <?php
 session_start();
 if(!$_SESSION['login']){
-    header("location:login.php");
+    header("location:../index.php");
     die;
  }else{
 //    echo $_SESSION['username'];
@@ -20,16 +20,17 @@ if(!$_SESSION['login']){
 $user=$_SESSION['id'];
 
 ?>
-<form action='#' method='post'> 
-  <input type='submit' name='logout' value='Logout'>
-  </form>
 <div class="container">
-<h2>PRIMEnote</h2>
-<div class="logobox"></div> 
-<div class="todolistlabel">&#128221; To Do List</div>
-<hr class="todolistline"></hr>
+<div class="logo"><img src="../img/logo.png" class="loginicon" width="90px"><h5> | PRIMEnote</h5>
+<form action='#' method='post'> 
+<input type='submit' name='logout' class="logoutbtn" value='Logout &#11177;'>
+</form>
+</div>
+<h4 class="userlabel"><img src="../img/userlabelicon.png" width="20px" height="20px"> | Welcome User</h4>
+<div class="container1">
+<div class="todolistlabel"><img src="../img/todolisticon.png" width="40px" height="40px"> TO DO LIST</div>
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn" id="myBtn">&#43; Add New Task</button>
+<button type="button" class="newtaskbtn" id="myBtn">&#43; Add New Task</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -39,14 +40,14 @@ $user=$_SESSION['id'];
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Add new Task</h4>
+        <h4 class="modal-title"><img src="../img/taskicon.png" width="40px" height="40px"> Add New Task</h4>
       </div>
       <div class="modal-body">
       <form action="#" method="post">
-      Task Name:<input type='text' name='TN' required><br>
-      Task Description<textarea name='Descrip' required></textarea><br>
-      Start Date:<input type='date' name='SD' required><br>
-      Due Date:<input type='date' name='DD' required>
+      Task Name<br>&#128221; | <input type='text' name='TN' required><br><br>
+      Task Description<br>&#128195; | <textarea name='Descrip' required></textarea><br><br>
+      Start Date<br>&#128197; | <input type='date' name='SD' required><br>
+      Due Date<br>&#128197; | <input type='date' name='DD' required>
       </div>
       <div class="modal-footer">
       <input type='Submit' name='Submit' value='Submit' class="btn btn-default">
@@ -66,15 +67,15 @@ $user=$_SESSION['id'];
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Edit Task</h4>
+        <h4 class="modal-title"><img src="../img/taskicon.png" width="40px" height="40px"> Edit Task</h4>
       </div>
       <div class="modal-body">
       <form action="#" method="post">
-      ID:<input type='text' name='eID' id='id' required readonly><br>
-      Task Name:<input type='text' name='eTN' id='tn' required><br>
-      Task Description<textarea name='eDescrip' id='td' required></textarea><br>
-      Start Date:<input type='date' name='eSD' id='sd' required><br>
-      Due Date:<input type='date' name='eDD' id='dd' required>
+      <input type='text' name='eID' id='id' required hidden><br>
+      Task Name<br>&#128221; | <input type='text' name='eTN' id='tn' required><br><br>
+      Task Description<br>&#128195; | <textarea name='eDescrip' id='td' required></textarea><br><br>
+      Start Date<br>&#128197; | <input type='date' name='eSD' id='sd' required><br>
+      Due Date<br>&#128197; | <input type='date' name='eDD' id='dd' required>
       </div>
       <div class="modal-footer">
       <input type='Submit' name='Edit' value='Submit' class="btn btn-default">
@@ -115,14 +116,14 @@ if (isset($_POST["logout"])) {
 
 </div>
 <div  id='mytable'>
-<table border='1'>
+<table id="todolisttable">
   <tr>
-    <th>ID</th>
-    <th>Task Name</th>
-    <th>Description</th> 
-    <th>Start Date</th>
-    <th>Due Date</th>
-    <th>Actions</th>
+    <th scope="col">Task No.</th>
+    <th scope="col">Task Name</th>
+    <th scope="col">Description</th> 
+    <th scope="col">Start Date</th>
+    <th scope="col">Due Date</th>
+    <th scope="col">Actions</th>
   </tr>
 <?php
 $result = $con->query('select * from task where user='.$user.'');
@@ -134,12 +135,13 @@ echo '<td>'.$row['Task_Name'].'</td>';
 echo '<td>'.$row['Task_description'].'</td>';
 echo '<td>'.$row['Start_Date'].'</td>';
 echo '<td>'.$row['Due_date'].'</td>';
-echo '<td><input type="button" name="Update" value="Edit" data-id='.$row["ID"].'><input type="button" name="Delete" value="Delete" data-id='.$row["ID"].'></td>';
+echo '<td><input type="button" name="Update" class="edit-btn" value="&#9998;" data-id='.$row["ID"].'> | <input type="button" name="Delete"  class="delete-btn" value="&#10006;" data-id='.$row["ID"].'></td>';
 echo '</tr>';
 
 }
 ?>
 </table>
+</div>
 </div>
 <script>
 $(document).ready(function(){

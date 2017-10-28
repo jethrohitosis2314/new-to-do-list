@@ -22,7 +22,7 @@
   }
   .content{
     float: left;
-    margin-top: 7%;
+    margin-top: 5%;
     margin-left: 5%;
   }
   .qoute{
@@ -257,6 +257,9 @@
    .logoposition{
      margin-left: 20px;
    }
+   .logintitle1{
+     width: 35%;
+   }
    .logo{
     margin-left: 175px;
    }
@@ -272,6 +275,12 @@
   .signupbtn{
     width: 100%;
   }
+  .modal-title{
+   font-size: 20px;
+  }
+  .modal-title1{
+    font-size: 12px;
+   }
   .signupusertxtbox{
     padding: 8px 60px;
   }
@@ -287,6 +296,15 @@
   .signuppasstxtbox{
     padding: 8px 60px;
   }
+  .modalsignupbtn{
+    margin-left: 0px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .modalsignupbtn1{
+    padding: 8px 10px;
+    font-size: 12px;
+  }
   .content1{
     width: 100%;
   }
@@ -301,5 +319,59 @@
   }
   .passtxtbox{
     padding: 10px 30px 0px 10px;
+  }
+  }
+    
+  @media screen and (max-width: 568px) {
+
+  .qoute{
+    font-size: 25px;
+  }
+  .signupbtn {
+    width: 93%;
+    font-size: 12px;
+  }
+  .content1{
+    margin-top: 10px;
+    width: 93%;
+  }
+  .logintitle1{
+    width: 43%;
+  }
+  .usertxtboxicon{
+    margin-left: 20px;
+  }
+  .passtxtboxicon{
+    margin-left: 20px;
+  }
+  .loginvalidation{
+    font-size: 12px;
+  }
+  .modal-title{
+    font-size: 17px;
+  }
+  .modal-title1{
+    font-size: 10px;
+  }
+  .signupusertxtbox{
+    padding: 10px 30px 0px 10px;
+  }
+  .signupfirsttxtbox{
+    padding: 10px 30px 0px 10px;
+  }
+  .signupmiddletxtbox{
+    padding: 10px 30px 0px 10px;
+  }
+  .signuplasttxtbox{
+    padding: 10px 30px 0px 10px;
+  }
+  .signuppasstxtbox{
+    padding: 10px 30px 0px 10px;
+  }
+  .modalsignupbtn{
+    font-size: 11px;
+  }
+  .modalsignupbtn1{
+    font-size: 11px;
   }
   }

@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #f4f4f4;
+}
+.container{
+    float: left;
+    width: 100%;
+}
+
+.logo{
+    padding-top: 5px;
+    padding-left: 18px;
+    margin-left: -13px;
+    width: 102%;
+    color:#505050;
+    background-color: #ffffff;
+    border-bottom:1px solid #d4d4d4;   
+    -webkit-box-shadow: 4px 1px 10px 0px rgba(184,184,184,1);
+    -moz-box-shadow: 4px 1px 10px 0px rgba(184,184,184,1);
+    box-shadow: 4px 1px 10px 0px rgba(184,184,184,1);
+}
+h5{
+    margin-top: -15px;
+    margin-left: 93px;
+    font-weight: 600;
+}
+.logoutbtn{
+  margin-top: -33px;
+  float: right;
+  font-size: 12px;
+  border: none;
+  padding: 3px 8px;
+  background-color: #f25341;
+  color: #ffffff;
+  border-radius: 2px;
+  transition:all 0.8s;
+}
+.logoutbtn:hover{
+    transition:all 0.8s;
+    background-color: #c43629;
+}
+.userlabel{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-left: -15px;
+    color: #ffffff;
+    background-color: #374d60;
+    width: 11%;
+    font-size: 14px;
+    padding: 5px;
+    font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.container1{
+    margin-top: 10px;
+    background-color: #ffffff;
+    float: left;
+    border-radius: 3px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.todolistlabel{
+    font-size: 15px;
+    font-weight: 600;
+    color: #727272;
+    font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.newtaskbtn{
+    margin-top: 10px;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-size:13px;
+    background-color: #88d88a;
+    border: none;
+    transition: all 0.8s;
+}
+.newtaskbtn:hover{
+    transition: all 0.8s;
+    background-color: #69b96a;
+}
+.edit-btn{
+    border-radius: 100px;
+    border: none;
+    width: 20px;
+    color: #ffffff;
+    background-color:#eee866;
+    transition: all 0.8s;
+}
+.edit-btn:hover{
+    background-color:#beb94c;
+    transition: all 0.8s;
+}
+.delete-btn{
+    border-radius: 100px;
+    border: none;
+    width: 20px;
+    color: #ffffff;
+    background-color:#f65353;
+}
+.delete-btn:hover{
+    background-color:#d44747;
+    transition: all 0.8s;
+}
+#todolisttable {
+    font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-collapse: collapse;
+    width: 96%;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+#todolisttable td, #todolisttable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#todolisttable tr:nth-child(even){background-color: #f2f2f2;}
+
+#todolisttable tr:hover {background-color: #ddd;}
+
+#todolisttable th {
+    font-weight: 400;
+    font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid #272727;
+    border: 1px solid #a5a5a5;
+    text-align: left;
+    background-color: #272727;
+    color: #a5a5a5;
+}
+
+@media screen and (max-width: 768px) {
+.logo{
+    width: 108%;
+}
+.logoutbtn{
+    font-size: 12px;
+}
+.userlabel{
+    width: 46%;
+}
+.newtaskbtn{
+    font-size: 12px;
+}
+.container1{
+    width: 100%;
+}
+th{
+    display: none;
+}
+#todolisttable{
+    margin-left: 5px;
+}
+table {
+    border: 0;
+  }
+  table caption {
+    font-size: 1.3em;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+  }
+  table td:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
