@@ -51,7 +51,8 @@
 </div>
  
   <div class="content1">
-  <p class="logintitle">Login to your notes.</p>
+  <img src="img/loginformicon.png" class="loginicon" width="40px" height="40px"><div class="logintitle1">Login form</div>
+  <p class="logintitle">Login to your notes and start with your to do list.</p>
   <form action='#' method='post'>
   <div class="usertxtboxicon">&#128231;<input type="text" name="user" class="usertxtbox" placeholder="| Email"></div>
   <br>

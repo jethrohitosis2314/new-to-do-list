@@ -175,13 +175,27 @@
   }
   .content1{
     margin-top: 40px;
-    background-color: #fffdc4;
+    background-color: #f9edc8;
     width: 95%;
+  }
+  .loginicon{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .logintitle1{
+    margin-top: -36px;
+    margin-left: 40px;
+    width: 25%;
+    padding:5px 20px;
+    font-size: 15px;
+    font-family: 'Graphik Web',Helvetica,Arial,sans-serif;
+    background-color: #e0995e;
+    color: #ffffff;
   }
   .logintitle{
    padding-left: 30px;
-   padding-top: 30px;
-   font-size: 18px;
+   padding-top: 10px;
+   font-size: 13px;
    font-family: 'Graphik Web',Helvetica,Arial,sans-serif;
    color: #505050;
   }
@@ -191,15 +205,14 @@
   }
   .usertxtbox
   {
+  margin-left: 10px;
   margin-top: 10px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #505050;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
   padding: 10px 100px 10px 6px;
   font-size: 14px;
   color: #505050;
-  background-color: transparent;
+  background-color: #ffffff;
   }
   .passtxtboxicon{
     margin-top: -20px; 
@@ -207,16 +220,15 @@
   }
   .passtxtbox
   {
-  margin-top: 0px;
-  border-top: none;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+    margin-left: 10px;  
+  margin-top: 3px;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
   padding: 10px 100px 10px 6px;
   font-size: 14px;
   color: #505050;
-  background-color: transparent;
-  margin-bottom: 15px;
+  background-color: #ffffff;
+  margin-bottom: 14px;
   }
   .login-btn{
     width: 100%;
